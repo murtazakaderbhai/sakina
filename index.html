@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎉</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .gift {
+        font-size: 120px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .gift:hover {
+        transform: scale(1.1);
+    }
+
+    .message {
+        display: none;
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 350px;
+        animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <div class="message" id="birthdayMessage">
+        <h1>Happy Birthday Dummy 🎂</h1>
+        <p>
+        Happy early birthday to my favorite little idiot 🤦🏽‍♂️ Honestly, I don’t know how someone can be this smart and this stupid at the same time, but you manage it so well. You’re dramatic, annoying, overconfident for no reason, and somehow still my best friend. September 11 is coming and just know I have the most embarrassing picture of you ready to post — the world deserves to see the real you 😭 Don’t worry though, I’ll still hype you up after I expose you. I love you, dummy. 💀💛
+        </p>
+    </div>
+</div>
+
+<script>
+function openGift() {
+    document.querySelector(".gift").style.display = "none";
+    document.getElementById("birthdayMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
